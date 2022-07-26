@@ -9,10 +9,8 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello World');
-});
-app.get('/mypath', (req, res) => {
-  res.send('Hello My Path');
+  var name = req.query.name
+  res.send('Hello ' + name);
 });
 
 
